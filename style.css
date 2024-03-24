@@ -88,7 +88,11 @@ header ul {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  transition: 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+}
+
+.navlinks.active {
+  right: 0;
 }
 
 header ul a {
@@ -129,6 +133,16 @@ header ul a:hover,
 
   .close {
     display: none;
+  }
+  .navlinks .active {
+    width: 100%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navlinks.active {
+    width: calc(100% - 30%);
   }
 }
 

@@ -9,28 +9,29 @@ let isOpen = false;
 
 navBarButton.addEventListener("click", () => {
   isOpen = !isOpen;
-
   if (isOpen) {
-    navbarLinks.style.right = "0";
+    navbarLinks.classList.add("active");
+  } else {
+    navbarLinks.classList.remove("active");
   }
 });
 
 closeButton.addEventListener("click", () => {
   isOpen = false;
-  navbarLinks.style.right = "-500px";
+  navbarLinks.classList.remove("active");
 });
 
 window.addEventListener("resize", () => {
   let screenWidth = window.innerWidth;
   if (screenWidth > 760) {
-    navbarLinks.style.right = "-500px";
+    navbarLinks.classList.remove("active");
     isOpen = false;
   }
 });
 
 navLinks.forEach((link) =>
   link.addEventListener("click", () => {
-    navbarLinks.style.right = "-500px";
+    navbarLinks.classList.remove("active");
     isOpen = false;
   })
 );
