@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+.logo {
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 32px;
+  margin-left: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 56px;
+  background-color: #393646;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: 0.3s ease-in all;
+}
+.close {
+  font-size: 20px;
+  padding: 0 0.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #c7c7c7;
+  display: block;
+}
+.close:hover {
+  color: #fff;
+}
+
+.bars {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #c7c7c7;
+}
+.bars:hover {
+  color: #fff;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.navlinks {
+  position: absolute;
+  right: -500px;
+  height: 100vh;
+  width: 380px;
+  background-color: #393646;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  transition: 0.2s ease-in-out;
+}
+
+header ul a {
+  color: #b1b1b1;
+}
+
+header ul a:hover,
+.active {
+  color: #fff;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 55px;
+  }
+  .bars {
+    display: none;
+    border: none;
+  }
+
+  header ul {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .navlinks {
+    position: inherit;
+    width: auto;
+    height: auto;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .close {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+section:nth-child(odd) {
+  background-color: #ffeeee;
+}
